@@ -10,7 +10,7 @@ Dataset Success Test
     ${tf_param}=    Get Test Param    DS_owldataset
     Log To Console    ${tf_param}
 Env Success Test
-    ${tf_param}=    %{ENV_owlenv}
+    ${tf_param}=    Get Environment Variable    ENV_THEOWL
     Log To Console    ${tf_param}
 Cuf Failed Test
     ${tf_param}=    Get Test Param    TC_CUF_owlcuf
@@ -19,5 +19,5 @@ Dataset Failed Test
     ${tf_param}=    Get Test Param    DS_owldataset
     Should Be Equal    ${tf_param}    ${False}
 Env Failed Test
-    ${tf_param}=    %{ENV_owlenv}
+    ${tf_param}=    Get Environment Variable    ENV_THEOWL
     Should Be Equal    ${tf_param}    ${False}
